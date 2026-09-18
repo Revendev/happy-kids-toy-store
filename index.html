@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Happy kids toy store</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            font-weight: 400;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("imge/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+
+        .container-fluid {
+            position: relative;
+            z-index: 1;
+        }
+
+        .jumbotron {
+            background: linear-gradient(80deg, #f0b3e9, #dea0ea, #A594F9);
+            border-radius: 20px;
+            color: white;
+        }
+
+        #jumbtn {
+            border: none;
+            background-color: orange;
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        .well {
+            border: 3px solid goldenrod;
+            border-radius: 15px;
+            background-color: rgb(248, 226, 195);
+
+        }
+
+        .poptoyh1 {
+            color: purple;
+        }
+
+        .thumbnail {
+            background-color: white;
+            border: none;
+            border-radius: 22px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(95, 55, 130, 0.15);
+            transition: 0.3s ease;
+        }
+
+
+        .thumbnail img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .caption {
+            padding: 18px;
+
+        }
+
+        .caption h3 {
+            color: #000000;
+            font-size: 21px;
+
+            font-weight: bold;
+        }
+
+        .caption p {
+            color: #000000;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+
+        .thumbnail:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(95, 55, 130, 0.25);
+        }
+
+
+        .thumbnail:hover img {
+            transform: scale(1.04);
+        }
+
+        .thumbnail img {
+            transition: 0.3s ease;
+        }
+
+
+        .row {
+            margin-top: 35px;
+        }
+
+        .toybtn {
+            width: 300px;
+            height: 40px;
+            border: none;
+            color: white;
+        }
+
+        #robot {
+            background-color: orange;
+            transition: 0.5;
+        }
+        #robot:hover{
+            background-color: rgb(220, 144, 2);
+            
+        }
+        
+        #teddy {
+            background-color: green;
+            transform: 0.5;
+        }
+        #teddy:hover{
+            background-color: rgb(0, 101, 0);
+           
+        }
+        #toycar {
+            background-color: red;
+            transition: 0.5;
+        }
+        #toycar:hover{
+            background-color: rgb(198, 2, 2);
+            
+        }
+        #bulding {
+            background-color: blue;
+        }
+        #bulding:hover{
+            background-color: rgb(0, 0, 190); 
+        }
+        .well-sm {
+            margin: 30px;
+            width: 435px;
+        }
+        #tabdiv{
+            background-color: white;
+            
+        }
+        .tabbox{
+            background-color: white;
+            height: 245px;
+            padding-top: 30px;
+            border-radius:10px ;
+        }
+        thead{
+            background-color: rgb(163, 227, 233);
+        }
+        .toyvid{
+            background-color: white;
+            height: 500px;
+            width: 700px;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        footer{
+            margin-top: 40px;
+            background-color: purple;
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            color: white;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-capitalize ">
+        <div class="jumbotron text-center">
+            <h1>Happy kids toy store</h1>
+            <p>discover amaizing toys , games and adventures</p>
+            <button id="jumbtn">
+                <h4>shop now</h4>
+            </button>
+        </div>
+
+        <div class="alert alert-success alert-dismissable fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <p><strong>special offer!</strong>get 20%off on selected toys today </p>
+        </div>
+
+        <div class="alert alert-info">
+            <p><strong>new arreval!</strong>chack out our newest collection of educational toys</p>
+        </div>
+
+        <div class="well well-lg text-center">
+            <h2>welcom to the world of fun !</h2>
+            <p>our toys help children lern,imagen,create and have fun at the same time</p>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <h1 class="text-center" class="poptoyh1">our popular toys</h1>
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img src="imge/LEGO.jpg" alt="lego">
+
+                        <div class="caption pull-left">
+                            <h3>bulding blocks</h3>
+                            <p>buld amazing citese and use your imagenation !</p>
+                            <h3>25$</h3>
+                            <button id="bulding" class="toybtn">
+                                <h4>add to cart</h4>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img src="imge/toycar.jpg" alt="toycar">
+
+                        <div class="caption pull-left">
+                            <h3>super racing car</h3>
+                            <p>a fast and colorful for exiting races!</p>
+                            <h3>30$</h3>
+                            <button id="toycar" class="toybtn">
+                                <h4>add to cart</h4>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img src="imge/teddybear.jpg" alt="teddybear">
+
+                        <div class="caption pull-left">
+                            <h3>lovely teddy bear</h3>
+                            <p>a soft and firendly teddy bear for kids</p>
+                            <h3>18$</h3>
+                            <button id="teddy" class="toybtn">
+                                <h4>add to cart</h4>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img src="imge/cuterobot.jpg" alt="robot">
+
+                        <div class="caption pull-left">
+                            <h3>smart robot</h3>
+                            <p>lern and play with your robot firend !</p>
+                            <h3>40$</h3>
+                            <button id="robot" class="toybtn">
+                                <h4>add to cart</h4>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <h1 class="text-center poptoyh1">whay kids love our store</h1>
+            <div class="col-sm-4 well well-sm">
+                <h1>fun</h1>
+                <p><strong>play</strong>lagh and enjoy every moment</p>
+            </div>
+
+            <div class="col-sm-4 well well-sm">
+                <h1>lerning</h1>
+                <p>educational toys help childern <strong>lern new skils</strong></p>
+            </div>
+
+            <div class="col-sm-4 well well-sm">
+                <h1>creativity</h1>
+                <p>create buld and imagen somthing amaizing</p>
+            </div>
+        </div>
+
+        <div class="row ">
+            <h1 class="text-center poptoyh1">see our toy advinture</h1>
+            <div class="col-sm-6 toyvid">
+                <h1>toy advinture</h1>
+                <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe src="https://www.youtube.com/embed/xq5f3SMU7lA" class="embed-responsive-item"></iframe>
+                </div>
+            </div>
+
+            <div class="col-sm-6 toyvid pull-right">
+                <h1>fun lerning toys</h1>
+                <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe src="https://www.youtube.com/embed/-OXFZpUDOeM" class="embed-responsive-item"></iframe>
+                </div>
+            </div>
+        </div>
+        <h1 class="poptoyh1 text-center">toy price list</h1>
+        <div class="container tabbox">
+            
+            <div id="tabdiv">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <th>toy</th>
+                        <th>category</th>
+                        <th>age</th>
+                        <th>price</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>bulding bloks</td>
+                            <td>educational</td>
+                            <td>5-10</td>
+                            <td>25$</td>
+                        </tr>
+                        <tr>
+                            <td>super race</td>
+                            <td>race</td>
+                            <td>6-12</td>
+                            <td>30$</td>
+                        </tr>
+                        <tr>
+                            <td>lovely teddy bear</td>
+                            <td>soft toys</td>
+                            <td>3-8</td>
+                            <td>18$</td>
+                        </tr>
+                        <tr>
+                            <td>smart robot</td>
+                            <td>tecnology</td>
+                            <td>8-14</td>
+                            <td>40$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer class="text-center">
+            <h1>happy kids toy store</h1>
+            <p>play.lern.imagen</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
